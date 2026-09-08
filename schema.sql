@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS orders (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  customer_name TEXT NOT NULL,
+  table_no TEXT,
+  subtotal REAL NOT NULL,
+  gst REAL NOT NULL,
+  service_charge REAL NOT NULL,
+  grand_total REAL NOT NULL,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS order_items (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  order_id INTEGER NOT NULL,
+  item_id INTEGER,
+  item_name TEXT NOT NULL,
+  quantity INTEGER NOT NULL,
+  price REAL NOT NULL,
+  total REAL NOT NULL,
+  FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
+);
