@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<title>Order History</title>
+
+<link rel="stylesheet" href="./style.css">
+
+</head>
+
+
+<body class="history-page">
+
+
+<div class="history-shell">
+
+
+<aside class="history-sidebar">
+
+<div class="history-sidebar-header">
+<h1>Order History</h1>
+<p>Saved orders from SQLite</p>
+</div>
+
+<div id="history-list" class="history-list">
+Loading orders...
+</div>
+
+</aside>
+
+
+<section class="history-detail-card">
+
+<div class="history-detail-header">
+<h2 id="history-title">Select an order</h2>
+<p id="history-meta">Choose an order from the left panel to view its items and totals.</p>
+</div>
+
+<div class="history-summary-grid" id="history-summary"></div>
+
+<div class="history-table-wrap">
+<table class="history-table">
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>Qty</th>
+<th>Price</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody id="history-items"></tbody>
+</table>
+</div>
+
+</section>
+
+
+</div>
+
+
+<script src="./script.js"></script>
+
+
+</body>
+
+</html>
